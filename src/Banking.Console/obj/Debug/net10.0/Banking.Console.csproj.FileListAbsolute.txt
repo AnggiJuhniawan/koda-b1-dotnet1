@@ -12,3 +12,4 @@ C:\Users\User01\Documents\_DATA D\Batch 1\Example\WEEK 4\WEEK 4\DOTNET\src\Banki
 C:\Users\User01\Documents\_DATA D\Batch 1\Example\WEEK 4\WEEK 4\DOTNET\src\Banking.Console\obj\Debug\net10.0\Banking.Console.pdb
 C:\Users\User01\Documents\_DATA D\Batch 1\Example\WEEK 4\WEEK 4\DOTNET\src\Banking.Console\obj\Debug\net10.0\Banking.Console.genruntimeconfig.cache
 C:\Users\User01\Documents\_DATA D\Batch 1\Example\WEEK 4\WEEK 4\DOTNET\src\Banking.Console\obj\Debug\net10.0\ref\Banking.Console.dll
+C:\Users\User01\Documents\_DATA D\Batch 1\Example\WEEK 4\WEEK 4\DOTNET\src\Banking.Console\obj\Debug\net10.0\Banking.Console.sourcelink.json
