@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Banking.Console/Banking.Console.csproj" />
+  </Folder>
+</Solution>

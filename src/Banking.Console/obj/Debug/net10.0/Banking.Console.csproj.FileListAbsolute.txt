@@ -1,0 +1,14 @@
+C:\Users\User01\Documents\_DATA D\Batch 1\Example\WEEK 4\WEEK 4\DOTNET\src\Banking.Console\bin\Debug\net10.0\Banking.Console.exe
+C:\Users\User01\Documents\_DATA D\Batch 1\Example\WEEK 4\WEEK 4\DOTNET\src\Banking.Console\bin\Debug\net10.0\Banking.Console.deps.json
+C:\Users\User01\Documents\_DATA D\Batch 1\Example\WEEK 4\WEEK 4\DOTNET\src\Banking.Console\bin\Debug\net10.0\Banking.Console.runtimeconfig.json
+C:\Users\User01\Documents\_DATA D\Batch 1\Example\WEEK 4\WEEK 4\DOTNET\src\Banking.Console\bin\Debug\net10.0\Banking.Console.dll
+C:\Users\User01\Documents\_DATA D\Batch 1\Example\WEEK 4\WEEK 4\DOTNET\src\Banking.Console\bin\Debug\net10.0\Banking.Console.pdb
+C:\Users\User01\Documents\_DATA D\Batch 1\Example\WEEK 4\WEEK 4\DOTNET\src\Banking.Console\obj\Debug\net10.0\Banking.Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User01\Documents\_DATA D\Batch 1\Example\WEEK 4\WEEK 4\DOTNET\src\Banking.Console\obj\Debug\net10.0\Banking.Console.AssemblyInfoInputs.cache
+C:\Users\User01\Documents\_DATA D\Batch 1\Example\WEEK 4\WEEK 4\DOTNET\src\Banking.Console\obj\Debug\net10.0\Banking.Console.AssemblyInfo.cs
+C:\Users\User01\Documents\_DATA D\Batch 1\Example\WEEK 4\WEEK 4\DOTNET\src\Banking.Console\obj\Debug\net10.0\Banking.Console.csproj.CoreCompileInputs.cache
+C:\Users\User01\Documents\_DATA D\Batch 1\Example\WEEK 4\WEEK 4\DOTNET\src\Banking.Console\obj\Debug\net10.0\Banking.Console.dll
+C:\Users\User01\Documents\_DATA D\Batch 1\Example\WEEK 4\WEEK 4\DOTNET\src\Banking.Console\obj\Debug\net10.0\refint\Banking.Console.dll
+C:\Users\User01\Documents\_DATA D\Batch 1\Example\WEEK 4\WEEK 4\DOTNET\src\Banking.Console\obj\Debug\net10.0\Banking.Console.pdb
+C:\Users\User01\Documents\_DATA D\Batch 1\Example\WEEK 4\WEEK 4\DOTNET\src\Banking.Console\obj\Debug\net10.0\Banking.Console.genruntimeconfig.cache
+C:\Users\User01\Documents\_DATA D\Batch 1\Example\WEEK 4\WEEK 4\DOTNET\src\Banking.Console\obj\Debug\net10.0\ref\Banking.Console.dll
