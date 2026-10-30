@@ -1,5 +1,6 @@
 ﻿using Banking.Console.Models;
 using Banking.Console.Interface;
+using Banking.Console.Services;
 
 Product product1 = new RegularProduct("Mouse", 350_000, "Mouse Rifai Warna Hitam", 10, true);
 
@@ -76,6 +77,23 @@ foreach (var name in productName)
 {
     Console.WriteLine(name);
 }
+
+System.Console.WriteLine("=========== ASYNC PRODUCT SEARCH =============");
+
+var queryService = new ProductQueryService(products);
+Product? resultAsync = await queryService.findProductAsync("Keyboard");
+
+if (resultAsync is null)
+{
+    System.Console.WriteLine("Product not Found");
+}
+else
+{
+    System.Console.WriteLine(resultAsync.GetInformation());
+}
+
+
+
 
 
 // Console.WriteLine("\n=== TOTAL STOCK VALUE ===");
