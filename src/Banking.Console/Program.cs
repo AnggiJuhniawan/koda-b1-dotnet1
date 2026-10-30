@@ -82,6 +82,16 @@ System.Console.WriteLine("=========== ASYNC PRODUCT SEARCH =============");
 
 var queryService = new ProductQueryService(products);
 Product? resultAsync = await queryService.findProductAsync("Keyboard");
+Task<Product?> task1 = queryService.findProductAsync("Keyboard");
+Task<Product?> task2 = queryService.findProductAsync("Mouse");
+Task<Product?> task3 = queryService.findProductAsync("Panci");
+
+Product?[] results = await Task.WhenAll(task1, task2, task3);
+
+foreach (Product? product in results)
+{
+    Console.WriteLine(product?.GetInformation() ?? "Product not found");
+}
 
 if (resultAsync is null)
 {

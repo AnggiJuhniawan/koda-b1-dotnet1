@@ -14,7 +14,7 @@ public class ProductQueryService
         string productName
     )
     {
-        await Task.Delay(300);
+        await Task.Delay(2000);
 
         return _products.FirstOrDefault(
             product => product.Name == productName
