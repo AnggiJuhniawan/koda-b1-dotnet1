@@ -81,7 +81,7 @@ foreach (var name in productName)
 System.Console.WriteLine("=========== ASYNC PRODUCT SEARCH =============");
 
 var queryService = new ProductQueryService(products);
-Product? resultAsync = await queryService.findProductAsync("Keyboard");
+// Product? resultAsync = await queryService.findProductAsync("Keyboard");
 Task<Product?> task1 = queryService.findProductAsync("Keyboard");
 Task<Product?> task2 = queryService.findProductAsync("Mouse");
 Task<Product?> task3 = queryService.findProductAsync("Panci");
@@ -93,14 +93,14 @@ foreach (Product? product in results)
     Console.WriteLine(product?.GetInformation() ?? "Product not found");
 }
 
-if (resultAsync is null)
-{
-    System.Console.WriteLine("Product not Found");
-}
-else
-{
-    System.Console.WriteLine(resultAsync.GetInformation());
-}
+// if (resultAsync is null)
+// {
+//     System.Console.WriteLine("Product not Found");
+// }
+// else
+// {
+//     System.Console.WriteLine(resultAsync.GetInformation());
+// }
 
 
 
