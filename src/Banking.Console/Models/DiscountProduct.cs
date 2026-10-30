@@ -5,7 +5,7 @@ namespace Banking.Console.Models;
 public class DiscountProduct : Product, IDiscountable
 {
     public decimal DiscountPercent { get; set; }
-    public DiscountProduct(string name, decimal price, string? description, int stock, decimal discountPercent) : base(name, price, description, stock)
+    public DiscountProduct(string name, decimal price, string? description, int stock, bool isActive, decimal discountPercent) : base(name, price, description, stock, isActive)
     {
         if (discountPercent < 0 || discountPercent > 100)
         {
@@ -26,6 +26,6 @@ public class DiscountProduct : Product, IDiscountable
 
     public override string GetInformation()
     {
-        return base.GetInformation() + $"| Discount: {DiscountPercent:N0}" + $"| Selling Price: Rp. {GetSellingPrice():N0}";
+        return base.GetInformation() + $"| Discount: {DiscountPercent:N0}" + $"| Selling Price: Rp. {GetSellingPrice():N0}, Status : {IsActive}";
     }
 }

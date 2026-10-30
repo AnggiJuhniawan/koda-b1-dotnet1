@@ -1,3 +1,5 @@
+using System.Dynamic;
+
 namespace Banking.Console.Models;
 
 public class Product
@@ -6,8 +8,9 @@ public class Product
     public decimal Price { get; private set; }
     public int Stock { get; private set; }
     public string? Description { get; set; }
-
-    public Product(string name, decimal price, string? description, int stock)
+    public bool IsActive { get; private set; }
+    public string Status => IsActive ? "Active" : "Inactive";
+    public Product(string name, decimal price, string? description, int stock, bool isActive = true)
     {
         if (string.IsNullOrWhiteSpace(name))
         {
@@ -25,6 +28,7 @@ public class Product
         Price = price;
         Description = description;
         Stock = stock;
+        IsActive = isActive;
     }
 
     public virtual decimal GetSellingPrice()
@@ -34,7 +38,7 @@ public class Product
 
     public virtual string GetInformation()
     {
-        return $"Product: {Name}, Price: {Price:N0}, Stock: {Stock}, Description: {Description}";
+        return $"Product: {Name}, Price: {Price:N0}, Stock: {Stock}, Description: {Description}, Status: {IsActive}";
     }
 
     public void Restock(int quantity)
@@ -52,6 +56,10 @@ public class Product
         if (quantity <= 0)
         {
             throw new ArgumentException("Quantity must be positive");
+        }
+        if (!IsActive)
+        {
+            throw new InvalidOperationException("Product is Inactive");
         }
         if (quantity > Stock)
         {

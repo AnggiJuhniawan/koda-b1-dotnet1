@@ -1,15 +1,22 @@
 ﻿using Banking.Console.Models;
 using Banking.Console.Interface;
 
-Product product1 = new RegularProduct("Mouse", 350_000, "Mouse Rifai Warna Hitam", 10);
+Product product1 = new RegularProduct("Mouse", 350_000, "Mouse Rifai Warna Hitam", 10, true);
 
-Product productDiscount = new DiscountProduct("Keyboard", 1000, "Mechanical Keyboard Rifai Warna Pink", 20, 20);
+Product productDiscount = new DiscountProduct("Keyboard", 1000, "Mechanical Keyboard Rifai Warna Pink", 20, true, 20);
 
 List<Product> products = new List<Product>()
 {
-    product1, productDiscount
+new RegularProduct("Mouse", 350_000, "Mouse Rifai Warna Hitam", 10, true),
+new DiscountProduct("Keyboard", 1000, "Mechanical Keyboard Rifai Warna Pink", 20, true, 20),
+new DiscountProduct("Monitor", 25000, "Monitor Layar 4K", 10, true, 50),
+new RegularProduct("Speaker", 5000, "Speaker 4K", 15, true),
 };
 
+// Tolong Tambahkan 
+// Dictionary<TKey, TValue>
+// HashSet<T>
+// Queue<T>
 
 Console.WriteLine("Munculin Product");
 foreach (Product product in products)
@@ -33,6 +40,88 @@ foreach (Product product in products)
 {
     Console.WriteLine($"{product.Name} : {product.Stock}");
 }
+
+Console.WriteLine("==== WHERE ====");
+var activeProduct = products.Where(product => product.IsActive).ToList();
+
+foreach (var productAlias in activeProduct)
+{
+    Console.WriteLine(productAlias.Name);
+}
+
+Console.WriteLine("==== FIRST DEFAULT ====");
+Product? foundProject = products.FirstOrDefault(product => product.Name == "Salah");
+
+if (foundProject != null)
+{
+    Console.WriteLine(foundProject.GetInformation());
+}
+else
+{
+    Console.WriteLine("Product Not Found");
+}
+
+Console.WriteLine("==== FIRST DEFAULT ====");
+var sortedProducts = products.OrderBy(product => product.Price).ToList();
+// Console.WriteLine(sortedProducts);
+foreach (var productAliasLagi in sortedProducts)
+{
+    Console.WriteLine($"{productAliasLagi.Name} - Rp {productAliasLagi.Price:N0}");
+}
+
+Console.WriteLine("==== SELECT ====");
+var productName = products.Select(product => product.Name).ToList();
+
+foreach (var name in productName)
+{
+    Console.WriteLine(name);
+}
+
+
+// Console.WriteLine("\n=== TOTAL STOCK VALUE ===");
+
+// decimal totalStockValue = products
+//     .Sum(product =>
+//         product.GetSellingPrice() * product.Stock
+//     );
+
+// Console.WriteLine(
+//     $"Total Stock Value: Rp{totalStockValue:N0}"
+// );
+
+// Console.WriteLine("\n=== PRODUCT DICTIONARY ===");
+
+// Dictionary<string, Product> productMap =
+//     products.ToDictionary(
+//         product => product.Name
+//     );
+
+// if (productMap.TryGetValue("Keyboard", out Product? result))
+// {
+//     Console.WriteLine(result.GetInformation());
+// }
+// else
+// {
+//     Console.WriteLine("Product not found");
+// }
+
+
+// Console.WriteLine("\n=== NULLABLE PRODUCT ===");
+
+// Product? producti = products
+//     .FirstOrDefault(p =>
+//         p.Name == "Mouse"
+//     );
+
+// if (producti is null)
+// {
+//     Console.WriteLine("Product not found");
+// }
+// else
+// {
+//     Console.WriteLine(producti.GetInformation());
+// }
+
 // Console.WriteLine(product1.Stock);
 // product1.Restock(5);
 
