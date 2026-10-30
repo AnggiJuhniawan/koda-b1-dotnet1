@@ -9,7 +9,7 @@ public class Product
 
     public Product(string name, decimal price, string? description, int stock)
     {
-        if (String.IsNullOrWhiteSpace(name))
+        if (string.IsNullOrWhiteSpace(name))
         {
             throw new ArgumentException("Name is required");
         }
@@ -34,7 +34,7 @@ public class Product
 
     public virtual string GetInformation()
     {
-        return $"Product: {Name}, Price: {Price}, Stock: {Stock}, Description: {Description}";
+        return $"Product: {Name}, Price: {Price:N0}, Stock: {Stock}, Description: {Description}";
     }
 
     public void Restock(int quantity)
@@ -57,7 +57,7 @@ public class Product
         {
             throw new InvalidOperationException("Kelebihan Woe");
         }
-        decimal totalPrice = Price * quantity;
+        decimal totalPrice = GetSellingPrice() * quantity;
         Stock -= quantity;
         return totalPrice;
     }

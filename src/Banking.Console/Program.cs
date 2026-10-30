@@ -10,6 +10,8 @@ List<Product> products = new List<Product>()
     product1, productDiscount
 };
 
+
+Console.WriteLine("Munculin Product");
 foreach (Product product in products)
 {
     Console.WriteLine(product.GetInformation());
@@ -18,13 +20,14 @@ foreach (Product product in products)
 Console.WriteLine("Transaksi");
 decimal total1 = product1.Sell(3);
 decimal total2 = productDiscount.Sell(3);
-Console.WriteLine($"Total Mouse: {product1.Stock}");
-Console.WriteLine($"Total Keyboard: {productDiscount.Stock}");
+Console.WriteLine($"Total Mouse: {total1:N2}");
+Console.WriteLine($"Total Keyboard: {total2:N0}");
 
 if (productDiscount is IDiscountable discountable)
 {
-    Console.WriteLine($"{discountable.CalculateDiscount()}");
+    Console.WriteLine($"Discount: {discountable.CalculateDiscount():N0}");
 }
+
 Console.WriteLine("Sisa Stok");
 foreach (Product product in products)
 {

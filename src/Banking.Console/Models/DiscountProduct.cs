@@ -1,4 +1,3 @@
-using System.Globalization;
 using Banking.Console.Interface;
 
 namespace Banking.Console.Models;
@@ -27,6 +26,6 @@ public class DiscountProduct : Product, IDiscountable
 
     public override string GetInformation()
     {
-        return base.GetInformation() + $"| Discount: {DiscountPercent}" + $"| Selling Price: Rp. {GetSellingPrice}";
+        return base.GetInformation() + $"| Discount: {DiscountPercent:N0}" + $"| Selling Price: Rp. {GetSellingPrice():N0}";
     }
 }
